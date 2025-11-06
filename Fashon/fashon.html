@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+                                            /* CSS Reset */
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+.section__subheader {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  letter-spacing: 3px;
+  color: #127bbc;
+}
+.section__header {
+  max-width: 450px;
+  margin-inline: auto;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #0f172a;
+  line-height: 3rem;
+}
+.section__description {
+  max-width: 450px;
+  margin-block: 1rem;
+  margin-inline: auto;
+  color: #6b7280;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  letter-spacing: 1px;
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: #244c74;
+  border-radius: 10%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #127bbc;
+}
+img {
+  display: flex;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+html,body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+                       /* header */
+.header {
+  background-image: url("img/ddddd.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #244c74;
+}
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #dcf3fe;
+}
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: #dcf3fe;
+  cursor: pointer;
+}
+.nav__links {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #dcf3fe;
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+.nav__links.open {
+  transform: translateY(0);
+}
+.link a {
+  color: #244c74;
+  transition: 0.3s;
+}
+.link a:hover {
+  color: #127bbc;
+}
+.nav__btns {
+  display: none;
+}
+.header__container {
+  padding-block: 10rem;
+}
+.header__container h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #d7efff;
+}
+                     /* offer */
+.offer__container {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+.offer__image {
+  overflow: hidden;
+}
+.offer__image img {
+  max-width: 250px;
+  margin-inline: auto;
+  border-radius: 40%;
+  filter: drop-shadow(0 10rem 10rem rgb(44, 147, 244));
+}
+.offer__content h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #0f172a;
+}
+.offer__ratings {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.offer__ratings span {
+  font-size: 1.2rem;
+  color: rgb(255, 183, 0);
+}
+.offer__ratings span:last-child {
+  color: #6b7280;
+}
+.offer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+                                    /* popular */
+.popular__container :is(.section__subheader, .section__header) {
+  text-align: center;
+}
+.popular__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+.popular__card {
+  border-radius: 5%;
+  transition: 0.3s;
+}
+.popular__card:hover {
+  background-color: #efefef;
+}
+.popular__card img {
+  border-radius: 5%;
+  filter: drop-shadow(0 .60rem 1rem rgb(32, 32, 32));
+}
+.popular__content {
+  padding: 1rem;
+}
+.popular__content h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #0f172a;
+}
+.popular__content p {
+  margin-bottom: 1rem;
+  color: #616161;
+}
+.popular__card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.popular__ratings span {
+  font-size: 1.2rem;
+  color: rgb(255, 183, 0);
+}
+.popular__ratings span:last-child {
+  color: #6b7280;
+}
+.popular__price {
+  font-size: 1.2rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #127bbc;
+}
+                                 /* client */
+.client__container {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+.client__image img {
+  max-width: 400px;
+  margin-inline: auto;
+  border-radius: 10%;
+  filter: drop-shadow(0 .72rem 1rem rgb(0, 88, 129));
+}
+.client__image img.show {
+  animation: show-image 0.3s forwards;
+}
+.client__image img.hide {
+  animation: hide-image 0.3s forwards;
+}
+@keyframes show-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide-image {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.client__content {
+  overflow: hidden;
+}
+.swiper {
+  width: 100%;
+  margin-top: 2rem;
+}
+.swiper-wrapper {
+  padding-bottom: 2rem;
+}
+.client__card p {
+  margin-bottom: 2rem;
+  color: #6b7280;
+}
+.client__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.client__details img {
+  max-width: 60px;
+  border-radius: 100%;
+}
+.client__details h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #127bbc;
+}
+.client__details h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+.client-swiper-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.client-swiper-btns .swiper-prev,
+.client-swiper-btns .swiper-next {
+  padding: 5px 10px;
+  font-display: 1.25rem;
+  color: #ffffff;
+  background-color: #6b7280;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 20%;
+}
+.client-swiper-btns .swiper-prev:hover,
+.client-swiper-btns .swiper-next:hover {
+  background-color: #244c74;
+}
+                                      /* banner */
+.banner {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner__wrapper {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: scroll 45s linear infinite;
+}
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+.banner__wrapper:hover {
+  animation-play-state: paused;
+}
+.banner__card {
+  max-width: 300px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.banner__content {
+  position: absolute;
+  padding: 1rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8));
+  transition: 0.3s;
+  z-index: 1;
+}
+.banner__card:hover .banner__content {
+  transform: translateY(0);
+}
+.banner__content h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+.banner__ratings {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 5px;
+  color: rgb(255, 183, 0);
+}
+                               /* newsletter */
+.newsletter__content {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #244c74;
+  border-radius: 5%;
+  filter: drop-shadow(0 .72rem 1rem rgb(1, 100, 161));
+}
+.newsletter__content .section__header {
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.newsletter__content .section__description {
+  margin-bottom: 2.2rem;
+  color: #f3f4f7;
+}
+.newsletter__content form {
+  max-width: 450px;
+  margin-inline: auto;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.newsletter__content input {
+  width: 100%;
+  padding: 0.75rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: #0f172a;
+}
+                                    /* footer */
+.footer {
+  background-color: #f3f4f7;
+}
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+.footer__logo {
+  margin-bottom: 1rem;
+}
+.footer__col .footer__logo a {
+  color: #127bbc;
+}
+.footer__col a {
+  color: #6b7280;
+  transition: 0.3s;
+}
+.footer__col a:hover {
+  color: #244c74;
+}
+.footer__col p {
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer__socials a {
+  font-size: 1.2em;
+}
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  color: #127bbc;
+}
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+}
+                                 /* media */
+@media (width> 540px) {
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width > 768px) {
+  .section__header,.section__description {
+    margin-inline-start: unset;
+  }
+  nav {
+    position: static;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+  .nav__menu__btn {
+    display: none;
+  }
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none;
+  }
+  .nav__links a {
+    color: #ffffff;
+  }
+  .nav__btns {
+    display: flex;
+    flex: 1;
+  }
+  .offer__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+  }
+  .offer__ratings,.offer__btn {
+    justify-content: flex-start;
+  }
+  .popular__container :is(.section__subheader, .section__header) {
+    text-align: left;
+  }
+  .popular__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .client__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+  }
+  .client__image {
+    grid-area: 1/2/2/3;
+  }
+  .client__details {
+    justify-content: flex-start;
+  }
+  .client-swiper-btns {
+    justify-content: flex-start;
+  }
+  .newsletter__content :is(.section__header, .section__description) {
+    margin-inline: auto;
+  }
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (width > 1024px) {
+  .popular__grid {
+    gap: 4rem;
+  }
+}
+
+
+  </style>
+  <title>Fashion Website</title>
+</head>
+<body> 
+                                           <!--==== header =====-->
+<header class="header">
+<nav>
+  <div class="nav__header">
+  <div class="logo nav__logo">
+    <a href="#">Fashion</a>
+  </div>
+  <div class="nav__menu__btn" id="menu-btn">
+    <span><i class="ri-menu-line"></i></span>
+  </div>
+  </div>
+  <ul class="nav__links" id="nav-links">
+    <li class="link"><a href="#home">Home</a></li>
+    <li class="link"><a href="#offer">Offer</a></li>
+    <li class="link"><a href="#popular">Popular</a></li>
+    <li class="link"><a href="#client">Client</a></li>
+    <li class="link"><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__btns">
+    <button class="btn">Sign Up</button>
+  </div>
+</nav>
+  <div class="section__container header__container" id="home">
+    <h1>Style that speaks<br />louder than<br />words...!</h1>
+  </div>
+</header>
+                                                 <!--==== Offer =====-->
+<section class="section__container offer__container" id="offer">
+  <div class="offer__image">
+    <img src="img/ddd1.png" alt="offer" />
+  </div>
+  <div class="offer__content">
+    <h3 class="section__subheader">EXCLUSIVE OFFER</h3>
+    <h2 class="section__header">Make Every Day a Fashion Show...!</h2>
+    <p class="section__description">
+      Fashion style is a way of expressing one’s identity through 
+      clothing, accessories, and overall aesthetic choices. It reflects 
+      personal taste, lifestyle, cultural influences, and sometimes even one’s mood. 
+      Styles in fashion are incredibly diverse and constantly evolving, making them a powerful medium for self-expression.
+    </p>
+    <h5>Long Down Jacket</h5>
+  <div class="offer__ratings">
+    <span><i class="ri-star-fill"></i></span>
+    <span><i class="ri-star-fill"></i></span>
+    <span><i class="ri-star-fill"></i></span>
+    <span><i class="ri-star-fill"></i></span>
+  </div>
+  <div class="offer__btn">
+     <button class="btn">Buy Now <span><i class="ri-arrow-right-line"></i></span></button>
+  </div>
+  </div>
+</section>
+                                                 <!--==== Popular =====-->
+<section class="section__container popular__container" id="popular">
+    <h3 class="section__subheader">MOST POPULAR </h3>
+    <h2 class="section__header">We Provide Popular Jacket for you...!</h2>
+  <div class="popular__grid">
+  <div class="popular__card">
+    <img src="img/popular1.png" alt="popular" />
+  <div class="popular__content">
+    <h4>Blue Puffer Jacket</h4>
+    <p>50% OFF</p>
+  <div class="popular__card__footer">
+  <div class="popular__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>                
+  </div>
+  <div class="popular__price">$329</div>
+  </div>
+  </div>
+  </div>
+  <div class="popular__card">
+    <img src="img/popular2.png" alt="popular" />
+  <div class="popular__content">
+    <h4>Grey Puffer Jacket</h4>
+    <p>50% OFF</p>
+  <div class="popular__card__footer">
+  <div class="popular__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>            
+  </div>
+  <div class="popular__price">$259</div>
+  </div>
+  </div>
+  </div>
+  <div class="popular__card">
+    <img src="img/popular3.png" alt="popular" />
+  <div class="popular__content">
+    <h4>Brown Puffer Jacket</h4>
+    <p>50% OFF</p>
+  <div class="popular__card__footer">
+  <div class="popular__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+  </div>
+  <div class="popular__price">$439</div>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+                                              <!--==== Client =====-->
+<section class="section__container client__container" id="client">
+  <div class="client__image">
+     <img src="img/dddo1.png" alt="client" />
+  </div>
+  <div class="client__content">
+     <h3 class="section__subheader">TESTIMONIALS</h3>
+     <h2 class="section__header">Our Client has Expressed...</h2>
+  <div class="swiper">
+  <div class="swiper-wrapper">
+  <div class="swiper-slide">
+  <div class="client__card">
+     <p>What you wear is how you present yourself to the world, 
+        especially today, when human contacts are so quick. Fashion is instant language.
+     </p>
+  <div class="client__details">
+     <img src="img/user-1.jpg" alt="client" />
+  <div>
+     <h4>Miuccia Prada</h4>
+     <h5>Frontend Developer</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="swiper-slide">
+  <div class="client__card">
+     <p>I think there is beauty in everything. What 'normal' people 
+        perceive as ugly, I can usually see something of beauty in it.
+     </p>
+  <div class="client__details">
+     <img src="img/user-2.jpg" alt="client" />
+  <div>
+     <h4>Sonia Rykiel</h4>
+     <h5>Financial Analyst</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="swiper-slide">
+  <div class="client__card">
+     <p>What's my style is not your style, and I don’t see 
+        how you can define it. It’s something that expresses who you are in your own way.
+     </p>
+  <div class="client__details">
+     <img src="img/user-3.jpg" alt="client" />
+  <div>
+     <h4>Vera Wang</h4>
+     <h5>Marketing Executive</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>\
+          <!--  navigation buttons -->
+  <div class="client-swiper-btns">
+     <div class="swiper-prev"><i class="ri-arrow-left-line"></i></div>
+     <div class="swiper-next"><i class="ri-arrow-right-line"></i></div>
+  </div>
+  </div>
+  </div>
+</section>
+                                                    <!--==== Banner =====-->
+<section class="banner">
+   <div class="banner__wrapper">
+   <div class="banner__card">
+     <img src="img/banner11.png" alt="banner" />
+   <div class="banner__content">
+     <h4>Japan</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>
+   </div>
+   </div>
+   <div class="banner__card">
+     <img src="img/banner12.png" alt="banner" />
+   <div class="banner__content">
+     <h4>India</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>    
+   </div>
+   </div>
+   <div class="banner__card">
+     <img src="img/banner13.png" alt="banner" />
+   <div class="banner__content">
+     <h4>Spain</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>        
+   </div>
+   </div>
+   <div class="banner__card">
+     <img src="img/banner14.png" alt="banner" />
+   <div class="banner__content">
+     <h4>Germany</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>         
+   </div>
+   </div>
+   <div class="banner__card">
+     <img src="img/banner15.png" alt="banner" />
+   <div class="banner__content">
+     <h4>America</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>   
+   </div>
+   </div>
+   <div class="banner__card">
+     <img src="img/banner16.png" alt="banner" />
+   <div class="banner__content">
+     <h4>England</h4>
+   <div class="banner__ratings">
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+     <span><i class="ri-star-fill"></i></span>
+   </div>          
+   </div>
+   </div>
+   </div>
+</section>
+                                              <!--==== Newsletter =====-->
+<section class="section__container newsletter__container" id="contact">
+   <div class="newsletter__content">
+     <h2 class="section__header">Subscribe Our Newsletter</h2>
+     <p class="section__description">
+       Subscribe to our newsletter for exclusive updates, offers, and style inspiration!
+     </p>
+    <form action="/">
+     <input type="text" placeholder="Enter Your Email" />
+     <button class="btn">Submit</button>
+    </form>
+   </div>
+</section>
+                                               <!--==== Footer =====-->
+<footer class="footer">
+  <div class="section__container footer__container">
+  <div class="footer__col">
+  <div class="logo footer__logo">
+     <a href="#home">Fashion</a>
+  </div>
+     <p>Discover a world of endless style possibilities as we curate 
+        the best in fashion, from hidden gems to iconic trends.
+     </p>
+  <div class="footer__socials">
+     <a href="#"><i class="ri-youtube-fill"></i></a>
+     <a href="#"><i class="ri-twitter-x-fill"></i></a>
+     <a href="#"><i class="ri-instagram-fill"></i></a>
+     <a href="#"><i class="ri-linkedin-fill"></i></a>
+  </div>
+  </div>
+  <div class="footer__col">
+     <h4>Quick Links</h4>
+   <ul class="footer__links">
+     <li><a href="#">Order Book</a></li>
+     <li><a href="#">Exclusive Offers</a></li>
+     <li><a href="#">Trendy Clothes</a></li>
+     <li><a href="#">Stylish accessories </a></li>
+   </ul>
+  </div>
+  <div class="footer__col">
+     <h4>Who Are We</h4>
+   <ul class="footer__links">
+     <li><a href="#">FAQs</a></li>
+     <li><a href="#">Best Seller</a></li>
+     <li><a href="#">Terms & Conditions</a></li>
+     <li><a href="#">Privacy Policy</a></li>
+   </ul>
+  </div>
+  <div class="footer__col">
+     <h4>Contact Us</h4>
+   <ul class="footer__links">
+     <li><a href="#">Customer Support</a></li>
+     <li><a href="#">Customer Helpline</a></li>
+     <li><a href="#">Join our Community</a></li>
+   </ul>
+  </div>
+  </div>
+  <div class="footer__bar">
+     Copyright © 2024 Fashion. All rights reserved.
+  </div>
+</footer>
+                                        <!--==== Script =====-->
+ <script src="https://unpkg.com/scrollreveal"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="main.js"></script>
+</body>
+</html>
