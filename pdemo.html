@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic excellence at University College - Shaping minds and building futures">
+    <title>University College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-image {
+            background: linear-gradient(rgba(12, 42, 92, 0.7), rgba(12, 42, 92, 0.7)),
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/509c6af0-4e51-40bb-be0b-ed77361f0774.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .faculty-card:hover {
+            transform: scale(1.03);
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header & Navbar -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">UNIVERSITY COLLEGE</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-800 hover:text-blue-600">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="#departments" class="text-gray-700 hover:text-blue-600">Departments</a>
+                <a href="#admissions" class="text-gray-700 hover:text-blue-600">Admissions</a>
+                <a href="#faculty" class="text-gray-700 hover:text-blue-600">Faculty</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600">Gallery</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image min-h-screen flex flex-col justify-center items-center text-white pt-20">
+        <div class="text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">UNIVERSITY COLLEGE</h1>
+            <p class="text-xl md:text-2xl mb-8">Shaping Minds, Building Futures</p>
+            <a href="#about" class="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">About Our Institution</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <p class="text-gray-700 mb-4">
+                        Founded in 1950, University College has been at the forefront of academic excellence, nurturing minds and fostering innovation across diverse disciplines.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Our mission is to provide transformative education that equips students with the knowledge, skills, and values to make meaningful contributions to society.
+                    </p>
+                    <p class="text-gray-700">
+                        We envision a world where education breaks barriers and creates opportunities for all, regardless of background or circumstance.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8cebaf3a-f6c6-4d25-acb1-a63d48c6f012.png" alt="University College campus with modern buildings surrounded by green trees" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Our Departments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Science Department -->
+                <div class="department-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Faculty of Science</h3>
+                    <p class="text-gray-600 mb-4">Explore the frontiers of scientific discovery through our innovative programs in Physics, Chemistry, Biology, and Mathematics.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                </div>
+
+                <!-- Arts Department -->
+                <div class="department-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Faculty of Arts</h3>
+                    <p class="text-gray-600 mb-4">Nurture your creativity through our comprehensive programs in Literature, History, Philosophy, and Visual Arts.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                </div>
+
+                <!-- Commerce Department -->
+                <div class="department-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Faculty of Commerce</h3>
+                    <p class="text-gray-600 mb-4">Develop business acumen through our industry-focused programs in Accounting, Finance, Marketing, and Management.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                </div>
+
+                <!-- Engineering Department -->
+                <div class="department-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Faculty of Engineering</h3>
+                    <p class="text-gray-600 mb-4">Engineer solutions for tomorrow's challenges with our cutting-edge programs in Civil, Mechanical, Electrical, and Computer Engineering.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Highlights -->
+    <section id="faculty" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Our Distinguished Faculty</h2>
+            
+            <div class="faculty-slider relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Faculty Member 1 -->
+                    <div class="faculty-card bg-white p-6 rounded-lg shadow-md transition duration-300 overflow-hidden">
+                        <div class="mb-4 overflow-hidden rounded-md">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8f878285-6779-47b9-add4-7419005e3956.png" alt="Dr. Sarah Johnson, Professor of Quantum Physics with short brown hair in professional attire" class="w-full">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1 text-gray-800">Dr. Sarah Johnson</h3>
+                        <p class="text-blue-600 mb-3">Professor of Quantum Physics</p>
+                        <p class="text-gray-600 italic">"The universe reveals its secrets to those who ask the right questions."</p>
+                        <p class="text-sm text-gray-500 mt-3">Nobel Prize in Physics 2018</p>
+                    </div>
+
+                    <!-- Faculty Member 2 -->
+                    <div class="faculty-card bg-white p-6 rounded-lg shadow-md transition duration-300 overflow-hidden">
+                        <div class="mb-4 overflow-hidden rounded-md">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5e8b74f5-e92c-4e1a-a809-dc674e361182.png" alt="Prof. Michael Chen, Chair of Literary Studies with glasses smiling professionally" class="w-full">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1 text-gray-800">Prof. Michael Chen</h3>
+                        <p class="text-blue-600 mb-3">Chair of Literary Studies</p>
+                        <p class="text-gray-600 italic">"Words have power to change minds and shape civilizations."</p>
+                        <p class="text-sm text-gray-500 mt-3">Pulitzer Prize Finalist</p>
+                    </div>
+
+                    <!-- Faculty Member 3 -->
+                    <div class="faculty-card bg-white p-6 rounded-lg shadow-md transition duration-300 overflow-hidden">
+                        <div class="mb-4 overflow-hidden rounded-md">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/afea63d7-6e12-4a7f-8817-b8b33d2ec00b.png" alt="Dr. Aisha Rahman leading an Economics seminar with diverse students" class="w-full">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1 text-gray-800">Dr. Aisha Rahman</h3>
+                        <p class="text-blue-600 mb-3">Dean of Economics</p>
+                        <p class="text-gray-600 italic">"Sustainable economic models are the foundation of global prosperity."</p>
+                        <p class="text-sm text-gray-500 mt-3">World Bank Advisor</p>
+                    </div>
+
+                    <!-- Faculty Member 4 -->
+                    <div class="faculty-card bg-white p-6 rounded-lg shadow-md transition duration-300 overflow-hidden">
+                        <div class="mb-4 overflow-hidden rounded-md">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d4c64729-7933-42aa-9ef0-292acdd91904.png" alt="Prof. David Wilson demonstrating robotics in the Engineering lab" class="w-full">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1 text-gray-800">Prof. David Wilson</h3>
+                        <p class="text-blue-600 mb-3">Director of Robotics Engineering</p>
+                        <p class="text-gray-600 italic">"The best engineers solve problems we didn't know we had."</p>
+                        <p class="text-sm text-gray-500 mt-3">IEEE Fellow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Campus Life</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8895be17-5fd7-47ce-bbb1-2809bcc7b1a4.png" alt="Students studying in the modern university library with natural light" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec43cb75-ca21-49d3-adb2-e9a833170850.png" alt="Science laboratory with students conducting experiments under supervision" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6a2f265-26d8-477d-af30-6a79d8b4957c.png" alt="Graduation ceremony with happy students throwing caps in the air" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/210539a9-0c31-423e-b1ed-da0623630473.png" alt="Sports day event with students competing in track and field activities" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/24356d37-46db-4883-b3a7-479c4e4cacc9.png" alt="Student art exhibition showcasing diverse creative works in bright colors" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66044edc-1481-40c0-ae0e-93487a50b15c.png" alt="Campus courtyard with students engaged in study groups under trees" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-20 bg-blue-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Admissions</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-10 items-center">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Application Timeline</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-white text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">1</div>
+                            <div>
+                                <p class="font-semibold">Application Opens:</p>
+                                <p class="text-blue-200">January 1st, 2024</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-white text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">2</div>
+                            <div>
+                                <p class="font-semibold">Early Decision Deadline:</p>
+                                <p class="text-blue-200">March 15th, 2024</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-white text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">3</div>
+                            <div>
+                                <p class="font-semibold">Regular Decision Deadline:</p>
+                                <p class="text-blue-200">June 30th, 2024</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-white text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">4</div>
+                            <div>
+                                <p class="font-semibold">Orientation Begins:</p>
+                                <p class="text-blue-200">September 1st, 2024</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="bg-white text-blue-900 p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-4">Ready to Join Us?</h3>
+                        <p class="mb-6">Begin your journey toward academic excellence today.</p>
+                        <div class="flex flex-col space-y-4">
+                            <a href="#" class="bg-blue-800 text-white py-3 px-6 rounded-lg text-center hover:bg-blue-700 transition duration-300 font-medium">
+                                Apply Now
+                            </a>
+                            <a href="#" class="border border-blue-800 text-blue-800 py-3 px-6 rounded-lg text-center hover:bg-blue-50 transition duration-300 font-medium">
+                                Request Information
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Contact Us</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800 mt-1 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <div>
+                                <p class="font-medium">Address:</p>
+                                <p class="text-gray-600">123 College Avenue, Academic City, AC 12345</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800 mt-1 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <div>
+                                <p class="font-medium">Phone:</p>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800 mt-1 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <div>
+                                <p class="font-medium">Email:</p>
+                                <p class="text-gray-600">admissions@universitycollege.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 p-3 rounded-full text-blue-800 hover:bg-blue-100 hover:text-blue-900 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-100 p-3 rounded-full text-blue-800 hover:bg-blue-100 hover:text-blue-900 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-100 p-3 rounded-full text-blue-800 hover:bg-blue-100 hover:text-blue-900 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-100 p-3 rounded-full text-blue-800 hover:bg-blue-100 hover:text-blue-900 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-6 text-blue-800">Send Us a Message</h3>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 w-full font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">UNIVERSITY COLLEGE</h3>
+                    <p class="max-w-md">Shaping minds and building futures through transformative education since 1950.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-blue-300 transition duration-300">Home</a></li>
+                            <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                            <li><a href="#departments" class="hover:text-blue-300 transition duration-300">Departments</a></li>
+                            <li><a href="#admissions" class="hover:text-blue-300 transition duration-300">Admissions</a></li>
+                            <li><a href="#contact" class="hover:text-blue-300 transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Library</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Research</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">News & Events</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Alumni</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Accessibility</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition duration-300">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2024 University College. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-blue-300 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-300 transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            document.querySelector('.md\\:flex').classList.toggle('hidden');
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('shadow-lg', window.scrollY > 10);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                document.querySelector('.md\\:flex').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
